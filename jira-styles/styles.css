@@ -11,22 +11,27 @@ item{
     border : 2px solid black;
     display: block;
     width: 800px;
-    margin: 10px 10px 25px 10px;
+    margin: 0px 0px 45px 0px;
     page-break-inside: avoid;
     padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 item title{
     display:block;
-    font-size: 1.3em;
+    font-size: 1.7em;
     font-weight: bold;
     text-align: center;
     border-bottom: 1px solid black;
     padding: 5px 10px 5px 10px;
 }
 
-item customfield,item timeestimate, item created, item updated, item resolved, item assignee, item reporter,item description, item fixVersion, item timespent, item timeestimate, item component, item parent, item comment, item link, item project, item key, item status, item statusCategory, item resolution, item created, item updated, item due, item votes, item watches, item attachements, item subtasks{
+item issuelinktype, item version,item aggregatetimespent, item priority, item aggregatetimeoriginalestimate, item aggregatetimeremainingestimate, item timeoriginalestimate, item customfield, item created, item updated, item resolved, item assignee, item reporter,item description, item fixVersion, item timespent, item timeestimate, item component, item parent, item comment, item link, item project, item key, item status, item statusCategory, item resolution, item created, item updated, item due, item votes, item watches, item attachements, item subtasks{
     display:none;
+}
+
+item summary:before{
+    content: "Summary: "
 }
 
 item summary{
@@ -35,37 +40,58 @@ item summary{
     border-bottom: 1px solid black;
 }
 
-item type, item priority {
+item type {
     font-size:2em;
     color:red;
     display:block;
-    float:left;
-    width:396px;
+    width:50%;
     text-align:center;
     padding:none;
     margin:none;
 }
-
+item label:first-child:before{
+    content: "Labels: "
+}
 item label{
-    display:inline-block;
-    width:100%;
+    width:50%;
+    border-top: 1px solid black;
+}
+
+item subtask:first-child:before{
+    content: "Subtasks: "
+}
+item subtasks {
+    width:50%;
+    display:block;
+    border-top: 1px solid black;
+}
+
+item parent:before{
+    content: "Parent: "
+}
+
+item parent {
+    width:50%;
+    display:block;
     border-top: 1px solid black;
 }
 
 #customfield_10105{
     display:inline-block;
-    width:100%;
-    border-top: 1px solid black;
-    color:navy;
-}
-#customfield_10108{
-    font-size:1.5em;
-    display:inline-block;
-    width:100%;
-    border-top: 1px solid black;
-    color:navy;
+    width:50%;
 }
 
+#customfield_10108{
+    font-size:1.5em;
+    font-size:2em;
+    color:red;
+    display:block;
+    width:50%;
+    text-align:right;
+    padding:none;
+    margin:none;
+    float:right;
+}
 
 br{
     display:block;
